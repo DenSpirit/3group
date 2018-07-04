@@ -5,4 +5,4 @@ var TestTemplateSchema = new mongoose.Schema({
     time: {type: Number, required: true}
 });
 
-mongoose.model('TestTemplate', TestTemplateSchema);
+exports.TestTemplate = mongoose.model('TestTemplate', TestTemplateSchema);

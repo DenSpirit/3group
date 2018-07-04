@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var Question = require('./Questions').Question;
 
 var SpeechQuestionsSchema = new mongoose.Schema({
     question: {type: String, required: true}
@@ -23,4 +24,4 @@ SpeechQuestionsSchema.methods.setQuestion = function (question) {
     this.question = question._question;
 };
 
-mongoose.model('Question').discriminator('SpeechQuestion', SpeechQuestionsSchema);
+exports.SpeechQuestion = Question.discriminator('SpeechQuestion', SpeechQuestionsSchema);

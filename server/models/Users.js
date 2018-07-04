@@ -30,7 +30,7 @@ UserSchema.methods.getInfo = function () {
       firstName: this.firstName,
       lastName: this.lastName,
       role: this.role
-  }  
+  }
 };
 
 UserSchema.methods.getMoreInfo = function () {
@@ -42,4 +42,4 @@ UserSchema.methods.getMoreInfo = function () {
     }
 };
 
-mongoose.model('User', UserSchema);
+exports.User = mongoose.model('User', UserSchema);

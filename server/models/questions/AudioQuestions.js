@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var Question = require('./Questions').Question;
 var fs = require('fs');
 
 var AudioQuestionsSchema = new mongoose.Schema({
@@ -28,4 +29,4 @@ AudioQuestionsSchema.methods.deleteTempFile = function () {
     fs.unlink(__dirname + '/../../../temp/' + this.path);
 };
 
-mongoose.model('Question').discriminator('AudioQuestion', AudioQuestionsSchema);
+exports.AudioQuestion = Question.discriminator('AudioQuestion', AudioQuestionsSchema);

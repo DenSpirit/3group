@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var Question = require('./Questions').Question;
 
 var TestQuestionsSchema = new mongoose.Schema({
     question: {type: String, required: true},
@@ -30,4 +31,4 @@ TestQuestionsSchema.methods.setQuestion = function (question) {
     this.correctAnswer = this.answers[question._correctAnswerIdx - 1];
 };
 
-mongoose.model('Question').discriminator('TestQuestion', TestQuestionsSchema);
+exports.TestQuestion = Question.discriminator('TestQuestion', TestQuestionsSchema);

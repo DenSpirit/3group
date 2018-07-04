@@ -26,4 +26,4 @@ NotificationSchema.methods.getNotification = function () {
     }
 };
 
-mongoose.model('Notification', NotificationSchema);
+exports.Notification = mongoose.model('Notification', NotificationSchema);

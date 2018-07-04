@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var Question = require('./Questions').Question;
 
 var InsertOpenQuestionSchema = new mongoose.Schema({
     questionParts: {type: [String], required: true}
@@ -25,4 +26,4 @@ InsertOpenQuestionSchema.methods.setQuestion = function (question) {
     });
 };
 
-mongoose.model('Question').discriminator('InsertOpenQuestion', InsertOpenQuestionSchema); 
+exports.InsertOpenQuestions = Question.discriminator('InsertOpenQuestion', InsertOpenQuestionSchema);

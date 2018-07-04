@@ -35,4 +35,4 @@ TestSchema.methods.getNotAutomaticallyCheckAnswers = function () {
     return answers;
 };
 
-mongoose.model('Test', TestSchema);
+exports.Test = mongoose.model('Test', TestSchema);

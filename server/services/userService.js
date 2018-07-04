@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var generatePassword = require('password-generator');
-var User = mongoose.model('User');
-var Test = mongoose.model('Test');
+var User = require('../models/Users').User;
+var Test = require('../models/Tests').Test;
 var Validator = require('../libs/requestValidator');
 var testService = require('./testService');
 var async = require('async');
@@ -143,7 +143,7 @@ module.exports.addNewTeacher = function (firstName, lastName, email, done) {
         .exec(function (res) {
             var username = 'Teacher' + res.count;
             var password = generatePassword(8, false);
-            addUsere({
+            addUser({
                 username: username,
                 password: password,
                 firstName: firstName,

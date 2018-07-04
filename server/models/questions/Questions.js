@@ -14,4 +14,4 @@ QuestionSchema.methods.getQuestion = function () {
     return JSON.stringify(this);
 };
 
-mongoose.model('Question', QuestionSchema);
+exports.Question = mongoose.model('Question', QuestionSchema);

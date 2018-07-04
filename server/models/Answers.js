@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var Question = mongoose.model('Question');
+var Question = require('./questions/Questions').Question;
 
 var AnswerSchema = new mongoose.Schema({
     question: {type: mongoose.Schema.ObjectId, ref: 'Question', required: true},
@@ -38,4 +38,4 @@ AnswerSchema.methods.getAnswer = function () {
     }
 };
 
-mongoose.model('Answer', AnswerSchema);
+exports.Answer = mongoose.model('Answer', AnswerSchema);

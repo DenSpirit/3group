@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var Question = require('./Questions').Question;
 
 var ReadingQuestionsSchema = new mongoose.Schema({
     text: {type: String, required: true},
@@ -14,7 +15,7 @@ ReadingQuestionsSchema.methods.getQuestion = function () {
         header: this.header,
         text: this.text,
         subQuestions: this.subQuestions.map(function (item) {
-           return item.id; 
+           return item.id;
         })
     }
 
@@ -27,4 +28,4 @@ ReadingQuestionsSchema.methods.setQuestion = function (question) {
     this.text = question._text;
 };
 
-mongoose.model('Question').discriminator('ReadingQuestion', ReadingQuestionsSchema);
+exports.ReadingQuestion = Question.discriminator('ReadingQuestion', ReadingQuestionsSchema);
