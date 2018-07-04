@@ -5,8 +5,10 @@ import {Router} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 import {Injectable} from "@angular/core";
 
+export type ResponseFiltering = 'json' | 'text' | 'response' | '';
+
 export interface CustomRequestOptions extends RequestOptionsArgs {
-	parseAs?: 'json' | 'text' | 'response'
+	parseAs?: ResponseFiltering;
 }
 
 @Injectable()
@@ -36,7 +38,7 @@ export class CustomHttp {
 		return this.wrap(this.http.delete(url, options), options && options.parseAs);
 	}
 
-	wrap(observable: Observable<Response>, mode: ('json' | 'text' | 'response') = 'json'): Observable<any> {
+	wrap(observable: Observable<Response>, mode: ResponseFiltering = 'json'): Observable<any> {
 		return observable
 			.catch(this.errorHandler.bind(this))
 			.map( (response: Response) => {

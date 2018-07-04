@@ -20,7 +20,6 @@
     "@angular/upgrade": "2.0.0-rc.4",
     "@angular2-material/core": "^2.0.0-alpha.4",
     "@angular2-material/progress-bar": "^2.0.0-alpha.6",
-    "@types/ws": "^5.1.2",
     "agenda": "^0.8.1",
     "angular2": "^2.0.0-beta.17",
     "angular2-in-memory-web-api": "0.0.14",
@@ -42,7 +41,6 @@
     "ejs": "~2.4.1",
     "express": "~4.14.0",
     "express-session": "~1.14.0",
-    "gulp-typescript": "^2.13.6",
     "gulp-watch": "^4.3.9",
     "hammerjs": "^2.0.8",
     "jquery": "^3.1.0",
@@ -80,9 +78,11 @@
     "@types/jasmine": "^2.8.8",
     "@types/jquery": "^3.1",
     "@types/node": "^10.5.1",
+    "@types/ws": "^5.1.2",
     "concurrently": "^2.0.0",
     "connect": "^3.4.1",
     "gulp": "^3.9.1",
+    "gulp-typescript": "^2.13.6",
     "gulp-concat": "^2.6.0",
     "gulp-csso": "^2.0.0",
     "gulp-ejs": "^2.1.3",
@@ -92,6 +92,6 @@
     "gulp-stylus": "^2.5.0",
     "gulp-ts": "^0.3.0",
     "gulp-uglify": "^2.0.0",
-    "typescript": "^2.3.4"
+    "typescript": "~2.9.2"
   }
 }
