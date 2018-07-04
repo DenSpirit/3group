@@ -1,12 +1,12 @@
-var mongoose = require('mongoose');
-var Question = mongoose.model('Question');
-var Test = mongoose.model('Test');
-var TestTemplate = mongoose.model('TestTemplate');
-var Answer = mongoose.model('Answer');
-var User = mongoose.model('User');
+const model = require('../models');
+var Question = model.questions.Question;
+var Test = model.Test;
+var TestTemplate = model.TestTemplate;
+var Answer = model.Answer;
+var User = model.User;
 var Validator = require('../libs/requestValidator');
 var testService = require('../services/testService');
-var questionMap = require('../libs/questionMap');
+var questionMap = require('../models/questions');
 
 module.exports.getQuestion = function (userId, testId, n, done) {
     validateQuestionRequest(userId, testId, n).exec(function (res) {
