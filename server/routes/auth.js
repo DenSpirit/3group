@@ -1,5 +1,3 @@
-var mongoose = require('mongoose');
-var User = mongoose.model('User');
 var passport = require('passport');
 
 module.exports.login = function (req, res, next) {

@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var User = require('mongoose').model('User');
 var userService = require('../services/userService');
 
 router.get('/allowTest', function (req, res) {

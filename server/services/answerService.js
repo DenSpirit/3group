@@ -1,8 +1,3 @@
-var mongoose = require('mongoose');
-var Answer = mongoose.model('Answer');
-var User = mongoose.model('User');
-var Test = mongoose.model('Test');
-var Question = mongoose.model('Question');
 var Validator = require('../libs/requestValidator');
 var fs = require('fs');
 
