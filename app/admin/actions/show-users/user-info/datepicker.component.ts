@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Output, OnInit} from "@angular/core";
 import {ROUTER_DIRECTIVES} from "@angular/router";
 import {MaterializeDirective} from "angular2-materialize";
+import {$} from "jquery";
 
 @Component({
     selector: 'datepicker',

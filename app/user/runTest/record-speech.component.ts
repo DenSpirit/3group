@@ -1,5 +1,6 @@
 import {onError} from "@angular/upgrade/src/util";
 import {Component, SimpleChanges, Input, OnChanges, OnDestroy} from "@angular/core";
+import {$} from "jquery";
 
 @Component({
     selector: 'speech-recorder',
@@ -28,8 +29,8 @@ export class RecordSpeechComponent implements OnChanges, OnDestroy {
 
 
     getUserMediaWrapper(session, successHandler, errorHandler) {
-        (navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.getUserMedia ||
-        navigator.msGetUserMedia).call(navigator, session, successHandler, errorHandler);
+        (navigator['webkitGetUserMedia'] || navigator['mozGetUserMedia'] || navigator.getUserMedia ||
+        navigator['msGetUserMedia']).call(navigator, session, successHandler, errorHandler);
     }
 
     recordAudio() {

@@ -11,8 +11,5 @@
     "noImplicitAny": false,
     "rootDir": "app",
     "outDir": "dist/app"
-  },
-  "exclude": [
-    "node_modules"
-  ]
+  }
 }

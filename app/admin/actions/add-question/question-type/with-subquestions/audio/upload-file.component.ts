@@ -8,7 +8,7 @@ import {OnDestroy, Component, Input, SimpleChanges, OnChanges} from "@angular/co
 
 export class UploadFileComponent implements OnChanges, OnDestroy {
     @Input() id:any;
-    array:any[];
+    array: Int8Array;
 
     ngOnChanges(changes:SimpleChanges):any {
         if (changes['id']) {
@@ -24,7 +24,7 @@ export class UploadFileComponent implements OnChanges, OnDestroy {
         reader.readAsArrayBuffer(event.target.files[0]);
     }
 
-    onFileLoaded(buffer:ArrayBuffer) {
+    onFileLoaded(buffer: FileReaderProgressEvent) {
         this.array = new Int8Array(buffer.target.result);
         //console.log(array);
         //streamFileToServer(array);
@@ -45,5 +45,3 @@ export class UploadFileComponent implements OnChanges, OnDestroy {
     }
 
 }
-
-
