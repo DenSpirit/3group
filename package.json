@@ -41,7 +41,6 @@
     "ejs": "~2.4.1",
     "express": "~4.14.0",
     "express-session": "~1.14.0",
-    "gulp-watch": "^4.3.9",
     "hammerjs": "^2.0.8",
     "jquery": "^3.1.0",
     "jsonwebtoken": "^7.0.1",
@@ -81,17 +80,6 @@
     "@types/ws": "^5.1.2",
     "concurrently": "^2.0.0",
     "connect": "^3.4.1",
-    "gulp": "^3.9.1",
-    "gulp-typescript": "^2.13.6",
-    "gulp-concat": "^2.6.0",
-    "gulp-csso": "^2.0.0",
-    "gulp-ejs": "^2.1.3",
-    "gulp-imagemin": "^3.0.2",
-    "gulp-livereload": "^3.8.1",
-    "gulp-myth": "^1.1.0",
-    "gulp-stylus": "^2.5.0",
-    "gulp-ts": "^0.3.0",
-    "gulp-uglify": "^2.0.0",
     "typescript": "~2.9.2"
   }
 }
