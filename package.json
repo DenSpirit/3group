@@ -20,6 +20,7 @@
     "@angular/upgrade": "2.0.0-rc.4",
     "@angular2-material/core": "^2.0.0-alpha.4",
     "@angular2-material/progress-bar": "^2.0.0-alpha.6",
+    "@types/ws": "^5.1.2",
     "agenda": "^0.8.1",
     "angular2": "^2.0.0-beta.17",
     "angular2-in-memory-web-api": "0.0.14",
@@ -69,7 +70,6 @@
     "socket.io-stream": "^0.9.0",
     "sugar": "^1.4.1",
     "systemjs": "0.19.27",
-    "tsd": "^0.6.5",
     "wav": "^1.0.1",
     "web-audio-api": "^0.2.2",
     "websocketstream": "^2.0.2",
@@ -78,7 +78,7 @@
   },
   "devDependencies": {
     "@types/jasmine": "^2.8.8",
-    "@types/jquery": "^3.3.4",
+    "@types/jquery": "^3.1",
     "@types/node": "^10.5.1",
     "concurrently": "^2.0.0",
     "connect": "^3.4.1",
@@ -92,6 +92,6 @@
     "gulp-stylus": "^2.5.0",
     "gulp-ts": "^0.3.0",
     "gulp-uglify": "^2.0.0",
-    "typescript": "^1.8.10"
+    "typescript": "^2.3.4"
   }
 }

@@ -1,6 +1,6 @@
 import {onError} from "@angular/upgrade/src/util";
 import {Component, SimpleChanges, Input, OnChanges, OnDestroy} from "@angular/core";
-import {$} from "jquery";
+import $ from "jquery";
 
 @Component({
     selector: 'speech-recorder',

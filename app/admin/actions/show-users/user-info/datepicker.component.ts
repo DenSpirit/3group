@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Output, OnInit} from "@angular/core";
 import {ROUTER_DIRECTIVES} from "@angular/router";
 import {MaterializeDirective} from "angular2-materialize";
-import {$} from "jquery";
+import $ from "jquery";
 
 @Component({
     selector: 'datepicker',
@@ -45,17 +45,21 @@ export class DatepickerComponent implements OnInit {
     };
 
     confirmDate() {
-        var a = $('#dateFrom').val();
-        var b = $('#dateTo').val();
+        var a = $('#dateFrom').val().toString();
+        var b = $('#dateTo').val().toString();
+        var hoursFrom = parseInt($('#hoursFrom').val().toString());
+        var minutesFrom = parseInt($('#minutesFrom').val().toString());
+        var hoursTo = parseInt($('#hoursTo').val().toString());
+        var minutesTo = parseInt($('#minutesTo').val().toString());
         if (a && b) {
 
             this.data.dateFrom.setFullYear(parseInt(a.substr(0, 4)), parseInt(a.substr(5, 2)) - 1, parseInt(a.substr(8, 2)));
-            this.data.dateFrom.setUTCHours($('#hoursFrom').val());
-            this.data.dateFrom.setUTCMinutes($('#minutesFrom').val());
+            this.data.dateFrom.setUTCHours(hoursFrom);
+            this.data.dateFrom.setUTCMinutes(minutesFrom);
 
             this.data.dateTo.setFullYear(parseInt(b.substr(0, 4)), parseInt(b.substr(5, 2)) - 1, parseInt(b.substr(8, 2)));
-            this.data.dateTo.setUTCHours($('#hoursTo').val());
-            this.data.dateTo.setUTCMinutes($('#minutesTo').val());
+            this.data.dateTo.setUTCHours(hoursTo);
+            this.data.dateTo.setUTCMinutes(minutesTo);
 
 
             console.log('month-test', this.data.dateFrom);

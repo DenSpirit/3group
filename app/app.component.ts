@@ -21,7 +21,7 @@ import {Subscription} from "rxjs/Rx";
 import {GUID} from "./common/guid/GUID";
 import {GuestInfoComponent} from "./admin/actions/show-users/guest-info/guest-info.component";
 
-import { $ } from "jquery";
+import $ from "jquery";
 //components
 
 //others

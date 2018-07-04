@@ -24,8 +24,8 @@ export class UploadFileComponent implements OnChanges, OnDestroy {
         reader.readAsArrayBuffer(event.target.files[0]);
     }
 
-    onFileLoaded(buffer: FileReaderProgressEvent) {
-        this.array = new Int8Array(buffer.target.result);
+    onFileLoaded(buffer: Event) {
+        this.array = new Int8Array((buffer.target as FileReader).result);
         //console.log(array);
         //streamFileToServer(array);
     }

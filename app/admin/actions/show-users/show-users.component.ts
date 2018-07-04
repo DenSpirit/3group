@@ -4,7 +4,7 @@ import {MaterializeDirective} from "angular2-materialize";
 import {InfiniteScroll} from "angular2-infinite-scroll";
 import {CustomHttp} from "../../../common/services/CustomHttp";
 import {StateService} from "./StateService";
-import {$} from "jquery";
+import $ from "jquery";
 
 @Component({
     selector: 'show-users-component',
