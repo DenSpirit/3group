@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "concurrent \"node app\" \"npm run tsc:w\"",
+    "start": "concurrently \"node app\" \"npm run tsc:w\"",
     "tsc": "tsc",
     "tsc:w": "tsc -w"
   },
