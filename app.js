@@ -14,19 +14,6 @@ var fs = require('fs');
 var wav = require('wav');
 //var ssw = require('./SocketServerWrite');
 
-require('./server/models/Users');
-require('./server/models/questions/Questions');
-require('./server/models/questions/TestQuestions');
-require('./server/models/questions/AudioQuestions');
-require('./server/models/questions/ReadingQuestions');
-require('./server/models/questions/SpeechQuestions');
-require('./server/models/questions/OpenQuestions');
-require('./server/models/questions/InsertTestQuestions');
-require('./server/models/questions/InsertOpenQuestions');
-require('./server/models/TestTemplate');
-require('./server/models/Tests');
-require('./server/models/Answers');
-require('./server/models/Notifications');
 require('./server/libs/agenda');
 
 // mongoose.connect("mongodb://192.168.14.81/test");
